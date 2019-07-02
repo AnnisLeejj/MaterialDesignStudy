@@ -6,13 +6,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.SearchView
 import android.widget.Toast
-import androidx.core.view.MenuItemCompat
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.reflect.AccessibleObject.setAccessible
 
 
-
-class MainActivity : AppCompatActivity() {
+class ToolbarStudyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,12 +49,12 @@ class MainActivity : AppCompatActivity() {
         mSearchView?.setOnQueryTextListener(object:androidx.appcompat.widget.SearchView.OnQueryTextListener,
             SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                Toast.makeText(this@MainActivity, "onQueryTextSubmit:$query", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ToolbarStudyActivity, "onQueryTextSubmit:$query", Toast.LENGTH_SHORT).show()
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                Toast.makeText(this@MainActivity, "onQueryTextChange:$newText", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ToolbarStudyActivity, "onQueryTextChange:$newText", Toast.LENGTH_SHORT).show()
                 return false
             }
         })
