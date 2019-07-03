@@ -1,4 +1,4 @@
-package com.example.myapplication.RecycleViewSuspension;
+package com.example.myapplication.recycleViewSuspension;
 
 import android.content.Context;
 import android.content.res.TypedArray;

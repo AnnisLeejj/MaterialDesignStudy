@@ -4,8 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.myapplication.RecycleViewSuspension.RecycleViewSuspensionActivity
+import com.example.myapplication.recycleViewSuspension.RecycleViewSuspensionActivity
 import com.example.myapplication.scrolling.ScrollingActivity
+import com.example.myapplication.topSuspension.TopSuspensionActivity
 import kotlinx.android.synthetic.main.activity_guide.*
 import kotlinx.android.synthetic.main.guide_scrolling.*
 
@@ -46,6 +47,11 @@ class GuideActivity : AppCompatActivity() {
         }
         _2_recycle_view_suspension.setOnClickListener {
             Intent(this, RecycleViewSuspensionActivity::class.java).run {
+                startActivity(this)
+            }
+        }
+        _2_top_suspension.setOnClickListener {
+            Intent(this, TopSuspensionActivity::class.java).run {
                 startActivity(this)
             }
         }

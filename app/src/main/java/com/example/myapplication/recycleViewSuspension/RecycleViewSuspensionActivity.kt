@@ -1,9 +1,8 @@
-package com.example.myapplication.RecycleViewSuspension
+package com.example.myapplication.recycleViewSuspension
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView

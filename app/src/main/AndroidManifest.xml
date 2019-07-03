@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".RecycleViewSuspension.RecycleViewSuspensionActivity"/>
+        <activity android:name=".topSuspension.TopSuspensionActivity"></activity>
+        <activity android:name=".recycleViewSuspension.RecycleViewSuspensionActivity" />
         <activity
             android:name=".scrolling.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
