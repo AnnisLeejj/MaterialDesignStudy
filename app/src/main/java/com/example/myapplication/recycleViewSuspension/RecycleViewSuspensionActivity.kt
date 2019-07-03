@@ -1,8 +1,10 @@
 package com.example.myapplication.recycleViewSuspension
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -29,16 +31,14 @@ class RecycleViewSuspensionActivity : AppCompatActivity() {
         mSuspensionIv = findViewById<ImageView>(R.id.iv_avatar)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
-//        toolbar.inflateMenu(R.menu.menu_main)
-//        toolbar.setOnMenuItemClickListener(object : Toolbar.OnMenuItemClickListener() {
-//            fun onMenuItemClick(item: MenuItem): Boolean {
-//                if (item.itemId == R.id.item_jump) {
-//                    val intent = Intent(this@MainActivity, MultiActivity::class.java)
-//                    startActivity(intent)
-//                }
-//                return false
-//            }
-//        })
+        toolbar.inflateMenu(R.menu.menu_recycleview_suspension)
+        toolbar.setOnMenuItemClickListener { item ->
+            if (item.itemId == R.id.item_jump) {
+                val intent = Intent(this@RecycleViewSuspensionActivity, MultiActivity::class.java)
+                startActivity(intent)
+            }
+            false
+        }
 
         val linearLayoutManager = LinearLayoutManager(this)
         val adapter = FeedAdapter()
