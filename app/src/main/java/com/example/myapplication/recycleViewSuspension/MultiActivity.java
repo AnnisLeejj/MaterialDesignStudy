@@ -59,7 +59,7 @@ public class MultiActivity extends AppCompatActivity {
 
                 if (mCurrentPosition != linearLayoutManager.findFirstVisibleItemPosition()) {
                     mCurrentPosition = linearLayoutManager.findFirstVisibleItemPosition();
-                    if (view.getTop() > mSuspensionHeight && adapter.getItemViewType(mCurrentPosition + 1) == MultiFeedAdapter.TYPE_TIME) {
+                    if (view != null && view.getTop() > mSuspensionHeight && adapter.getItemViewType(mCurrentPosition + 1) == MultiFeedAdapter.TYPE_TIME) {
                         mSuspensionBar.setY(-mSuspensionHeight);
                     } else {
                         mSuspensionBar.setY(0);
